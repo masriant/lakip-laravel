@@ -19,7 +19,7 @@
             <a class="nav-link {{ ($active === "categories") ? 'active' : '' }}" href="/categories">Categories</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link {{ ($active === "categories") ? 'active' : '' }}" href="/categories">Contact Us</a>
+            <a class="nav-link {{ ($active === "contact") ? 'active' : '' }}" href="/contact">Contact Us</a>
           </li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
