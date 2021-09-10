@@ -14,7 +14,7 @@
             @endif
             <div class="input-group mb-3">
                 <input type="text" class="form-control" placeholder="Search..." name="search" value="{{ request('search') }}">
-                <button class="btn btn-danger" type="submit">Search</button>
+                <button class="btn btn-outline-warning" type="submit">Search</button>
               </div>
         </form>
     </div>
@@ -35,7 +35,6 @@
       <a href="/posts/{{ $posts[0]->slug }}" class="text-decoration-none btn btn-primary">Read more...</a>
     </div>
   </div>
-
 
   <div class="container">
       <div class="row">
@@ -65,19 +64,8 @@
   <p class="text-center fs-4">No post found.</p>
   @endif
 
-
-{{-- @foreach ($posts->skip(1) as $post )
-<article class="mb-5 border-bottom pb-4">
-    <h2><a href="/posts/{{ $post->slug }}" class="text-decoration-none">{{ $post->title }}</a></h2>
-
-    <p>By. <a href="/authors/{{ $post->author->username }}" class="text-decoration-none">{{ $post->author->name }}</a> in <a href="/categories/{{ $post->category->slug }}" class="text-decoration-none">{{ $post->category->name }}</a></p>
-
-    <p>{{ $post->excerpt }}</p>
-    <a href="/posts/{{ $post->slug }}" class="text-decoration-none">Read more...</a>
-</article>
-
-@endforeach --}}
-
-    {{-- <script src="js/script.js"></script> --}}
+  <div class="d-flex justify-content-center">
+        {{ $posts->links() }}
+  </div>
 @endsection
 
